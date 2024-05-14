@@ -1,11 +1,11 @@
 import Movie from '../../components/movie';
+import {URL} from '../constants';
 import styles from './homepage.module.css';
 export const metadata = {
 	title: 'home.js',
 	description: 'Generatewfwefewfed by Next.js',
 };
 
-export const URL = 'https://nomad-movies.nomadcoders.workers.dev/movies';
 const getMovies = async () => {
 	console.log('fetching');
 	await new Promise(resolve => setTimeout(resolve, 1000));

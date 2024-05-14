@@ -1,4 +1,4 @@
-import {URL} from '../(home)/page';
+import {URL} from '../constants';
 import styles from './movie-info.module.css';
 export async function getMovies(id: string) {
 	const response = await fetch(`${URL}/${id}`);

@@ -1,4 +1,3 @@
-import {URL} from '../(home)/page';
 import styles from './movie-video.module.css';
 async function getVideos(id: string) {
 	const response = await fetch(`${URL}/${id}/videos`);
