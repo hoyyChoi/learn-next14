@@ -1,5 +1,5 @@
-import Link from 'next/link';
-
+import Movie from '../../components/movie';
+import styles from './homepage.module.css';
 export const metadata = {
 	title: 'home.js',
 	description: 'Generatewfwefewfed by Next.js',
@@ -17,12 +17,15 @@ const getMovies = async () => {
 export default async function Tomato() {
 	const movies = await getMovies();
 	return (
-		<h1>
+		<div className={styles.container}>
 			{movies.map(movie => (
-				<li key={movie.id}>
-					<Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-				</li>
+				<Movie
+					key={movie.id}
+					id={movie.id}
+					poster_path={movie.poster_path}
+					title={movie.title}
+				/>
 			))}
-		</h1>
+		</div>
 	);
 }
