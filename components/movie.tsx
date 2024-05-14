@@ -16,7 +16,9 @@ export default function Movie({title, id, poster_path}: MovieProps) {
 				alt="이미지대체ㄷ"
 				onClick={() => router.push(`/movies/${id}`)}
 			/>
-			<Link href={`/movies/${id}`}>{title}</Link>
+			<Link prefetch href={`/movies/${id}`}>
+				{title}
+			</Link>
 		</div>
 	);
 }
